@@ -77,12 +77,11 @@
             this.menuMenuBar = new System.Windows.Forms.MenuStrip();
             this.menuBar_txtMemberName = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar_lblIdTypeUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.bindingSourceUser = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coAndCoDBDataSet = new Projet_CoAndCo.CoAndCoDBDataSet();
-            this.tableAdapterManager1 = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.TableAdapterManager();
-            this.tableAdapterUser = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.GenreTableAdapter();
+            this.userTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.UserTableAdapter();
             this.menuMenuBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -321,25 +320,25 @@
             // 
             this.menuBar_Playlist_itemAdd.Name = "menuBar_Playlist_itemAdd";
             this.menuBar_Playlist_itemAdd.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.menuBar_Playlist_itemAdd.Size = new System.Drawing.Size(152, 22);
+            this.menuBar_Playlist_itemAdd.Size = new System.Drawing.Size(151, 22);
             this.menuBar_Playlist_itemAdd.Text = "Ajouter";
             // 
             // menuBar_playlist_itemUpdate
             // 
             this.menuBar_playlist_itemUpdate.Name = "menuBar_playlist_itemUpdate";
-            this.menuBar_playlist_itemUpdate.Size = new System.Drawing.Size(152, 22);
+            this.menuBar_playlist_itemUpdate.Size = new System.Drawing.Size(151, 22);
             this.menuBar_playlist_itemUpdate.Text = "Modifier";
             // 
             // menuBar_playlist_itemSearch
             // 
             this.menuBar_playlist_itemSearch.Name = "menuBar_playlist_itemSearch";
-            this.menuBar_playlist_itemSearch.Size = new System.Drawing.Size(152, 22);
+            this.menuBar_playlist_itemSearch.Size = new System.Drawing.Size(151, 22);
             this.menuBar_playlist_itemSearch.Text = "Rechercher";
             // 
             // menuBar_playlist_itemDelete
             // 
             this.menuBar_playlist_itemDelete.Name = "menuBar_playlist_itemDelete";
-            this.menuBar_playlist_itemDelete.Size = new System.Drawing.Size(152, 22);
+            this.menuBar_playlist_itemDelete.Size = new System.Drawing.Size(151, 22);
             this.menuBar_playlist_itemDelete.Text = "Supprimer";
             // 
             // menuBar_menuTools
@@ -457,43 +456,19 @@
             this.menuBar_lblIdTypeUser.Size = new System.Drawing.Size(25, 20);
             this.menuBar_lblIdTypeUser.Text = "0";
             // 
-            // bindingSourceUser
+            // userBindingSource
             // 
-            this.bindingSourceUser.DataSource = this.coAndCoDBDataSet;
-            this.bindingSourceUser.Position = 0;
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.coAndCoDBDataSet;
             // 
             // coAndCoDBDataSet
             // 
             this.coAndCoDBDataSet.DataSetName = "CoAndCoDBDataSet";
             this.coAndCoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tableAdapterManager1
+            // userTableAdapter
             // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.CollectionTableAdapter = null;
-            this.tableAdapterManager1.CommentTableAdapter = null;
-            this.tableAdapterManager1.ExemplaryTableAdapter = null;
-            this.tableAdapterManager1.GenreTableAdapter = this.tableAdapterUser;
-            this.tableAdapterManager1.Media_SeasonTableAdapter = null;
-            this.tableAdapterManager1.MediaTableAdapter = null;
-            this.tableAdapterManager1.NationalityTableAdapter = null;
-            this.tableAdapterManager1.ParentsTableAdapter = null;
-            this.tableAdapterManager1.Person_MediaTableAdapter = null;
-            this.tableAdapterManager1.PersonTableAdapter = null;
-            this.tableAdapterManager1.Playlist_ContentTableAdapter = null;
-            this.tableAdapterManager1.PlaylistTableAdapter = null;
-            this.tableAdapterManager1.RoleTableAdapter = null;
-            this.tableAdapterManager1.SeasonTableAdapter = null;
-            this.tableAdapterManager1.SetTableAdapter = null;
-            this.tableAdapterManager1.Type_MediaTableAdapter = null;
-            this.tableAdapterManager1.Type_MetierTableAdapter = null;
-            this.tableAdapterManager1.Type_UserTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.UserTableAdapter = null;
-            // 
-            // tableAdapterUser
-            // 
-            this.tableAdapterUser.ClearBeforeFill = true;
+            this.userTableAdapter.ClearBeforeFill = true;
             // 
             // frmMenu
             // 
@@ -507,9 +482,10 @@
             this.MinimizeBox = false;
             this.Name = "frmMenu";
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuMenuBar.ResumeLayout(false);
             this.menuMenuBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -565,9 +541,8 @@
         private System.Windows.Forms.MenuStrip menuMenuBar;
         private System.Windows.Forms.ToolStripMenuItem menuBar_txtMemberName;
         private System.Windows.Forms.ToolStripMenuItem menuBar_lblIdTypeUser;
-        private System.Windows.Forms.BindingSource bindingSourceUser;
         private CoAndCoDBDataSet coAndCoDBDataSet;
-        private CoAndCoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private CoAndCoDBDataSetTableAdapters.GenreTableAdapter tableAdapterUser;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private CoAndCoDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
     }
 }

@@ -14,49 +14,19 @@ namespace Projet_CoAndCo
         private int _idTypeUser;
         private string _labelTypeUser;
 
-        // Getters (Accesseurs)
-        public int GetIdUser()
-        {
-            return this._idUser;
-        }
-        public string GetPassword()
-        {
-            return this._password;
-        }
-        public string GetLogin()
-        {
-            return this._login;
-        }
-        public int GetIdTypeUser()
-        {
-            return this._idTypeUser;
-        }
-        public string GetLabelTypeUser()
-        {
-            return this._labelTypeUser;
-        }
+        // Accessors
+        public int GetIdUser() { return this._idUser; }
+        public string GetPassword() { return this._password; }
+        public string GetLogin() { return this._login; }
+        public int GetIdTypeUser() { return this._idTypeUser; }
+        public string GetLabelTypeUser() { return this._labelTypeUser; }
 
-        // Setters (Mutateurs)
-        private void SetIdUser(int id)
-        {
-            this._idUser = id;
-        }
-        private void SetPassword(string password)
-        {
-            this._password = password;
-        }
-        private void SetLogin(string login)
-        {
-            this._login = login;
-        }
-        private void SetIdTypeUser(int id)
-        {
-            this._idTypeUser = id;
-        }
-        private void SetLabelTypeUser(string label)
-        {
-            this._labelTypeUser = label;
-        }
+        // Mutators
+        private void SetIdUser(int id) { this._idUser = id; }
+        public void SetPassword(string password) { this._password = password; }
+        public void SetLogin(string login) { this._login = login; }
+        private void SetIdTypeUser(int id) { this._idTypeUser = id; }
+        public void SetLabelTypeUser(string label) { this._labelTypeUser = label; }
 
         // Constructor
         public User(int id = 0, int id_type = 0)

@@ -17,7 +17,6 @@ namespace Projet_CoAndCo
             InitializeComponent();
             User user = new User(0, 0);
             ShowMenus(user.GetIdUser());
-
         }
 
         // event functions
@@ -65,6 +64,13 @@ namespace Projet_CoAndCo
         private void menuAffichage_DropDownClosed(object sender, EventArgs e)
         {
             this.menuBar_menuAffichage.ForeColor = Color.White;
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'coAndCoDBDataSet.User'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.userTableAdapter.Fill(this.coAndCoDBDataSet.User);
+            menuBar_txtMemberName.Text = coAndCoDBDataSet.User.Rows[1][2].ToString();
         }
     }
 }

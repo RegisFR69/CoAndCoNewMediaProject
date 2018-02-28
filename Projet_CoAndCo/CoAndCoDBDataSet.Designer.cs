@@ -9449,7 +9449,7 @@ namespace Projet_CoAndCo.CoAndCoDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9756,7 +9756,7 @@ namespace Projet_CoAndCo.CoAndCoDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10004,7 +10004,7 @@ namespace Projet_CoAndCo.CoAndCoDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10291,7 +10291,7 @@ SELECT id_exemplary, name_exemplary, path_exemplary, format_exemplary, id_media,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10746,7 +10746,7 @@ SELECT id_media, title, id_nationality, id_type_media, release_date, id_default_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11260,7 +11260,7 @@ SELECT id_media, id_season, ms_position FROM Media_Season WHERE (id_media = @id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11567,7 +11567,7 @@ SELECT id_nationality, label_nationality FROM Nationality WHERE (id_nationality 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11874,7 +11874,7 @@ SELECT id_nationality, label_nationality FROM Nationality WHERE (id_nationality 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12161,7 +12161,7 @@ SELECT id_person, name_persone, firstName_person, birthDate_person, deathDate_pe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12637,7 +12637,7 @@ SELECT id_person_media, id_metier, id_person, id_media, pm_position FROM Person_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12994,7 +12994,7 @@ SELECT id_playlist, name_playlist FROM Playlist WHERE (id_playlist = @id_playlis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13324,7 +13324,7 @@ SELECT id_user, id_media, id_playlist, pc_position FROM Playlist_Content WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13640,7 +13640,7 @@ SELECT id_role, label_role, id_person_media FROM Role WHERE (id_role = @id_role)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13991,7 +13991,7 @@ SELECT id_season, name_season FROM Season WHERE (id_season = @id_season)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14318,7 +14318,7 @@ SELECT id_season, name_season FROM Season WHERE (id_season = @id_season)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14641,7 +14641,7 @@ SELECT id_season, name_season FROM Season WHERE (id_season = @id_season)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14963,7 +14963,7 @@ SELECT id_metier, name_metier FROM Type_Metier WHERE (id_metier = @id_metier)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15287,7 +15287,7 @@ SELECT id_type_user, label_type_user FROM Type_User WHERE (id_type_user = @id_ty
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15618,7 +15618,7 @@ SELECT id_user, password, login, id_type_user FROM [User] WHERE (id_user = @id_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CoAndCoMediaProject.Properties.Settings.Default.CoAndCoDBConnectionString;
+            this._connection.ConnectionString = global::Projet_CoAndCo.Properties.Settings.Default.CoAndCoDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

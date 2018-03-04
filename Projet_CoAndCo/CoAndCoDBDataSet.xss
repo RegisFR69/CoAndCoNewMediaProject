@@ -23,7 +23,7 @@
     <Shape ID="DesignTable:Set" ZOrder="5" X="854" Y="545" Height="115" Width="163" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Type_Media" ZOrder="24" X="100" Y="426" Height="75" Width="214" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="64" SplitterPosition="24" />
     <Shape ID="DesignTable:Type_Metier" ZOrder="22" X="92" Y="527" Height="75" Width="216" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="64" SplitterPosition="24" />
-    <Shape ID="DesignTable:Type_User" ZOrder="11" X="998" Y="202" Height="75" Width="204" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="64" SplitterPosition="24" />
+    <Shape ID="DesignTable:Type_User" ZOrder="11" X="998" Y="202" Height="153" Width="204" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="64" SplitterPosition="64" />
     <Shape ID="DesignTable:User" ZOrder="20" X="827" Y="96" Height="172" Width="170" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="102" SplitterPosition="102" />
   </Shapes>
   <Connectors>

@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Data;
+using System.Collections;
 
 namespace Projet_CoAndCo
 {
-    public partial class frmMenu : Form
+    public partial class frmMenu
     {
         // Display admin only menu
         private void ShowMenuAdmin(Boolean display)
@@ -28,9 +29,11 @@ namespace Projet_CoAndCo
         }
 
         // Display menu depending on type user 
-        private void ShowMenus(int typeUser)
+        private void ShowMenus(User user)
         {
-            switch (typeUser)
+            int id = user.getIdTypeUser();
+            //int typeUser = user.getIdTypeUser;
+            switch (id)
             {
                 case 1: // Member
                     ShowMenuMember(true);
@@ -45,24 +48,39 @@ namespace Projet_CoAndCo
                     ShowMenuAdmin(false);
                     break;
             }
-            menuBar_btnConnection.Text = SetButtonConnectionText(typeUser);
-            menuBar_txtMemberName.Text = SetTxtBoxMemberNameText(typeUser);
+            menuBar_btnConnection.Text = SetButtonConnectionText(id);
+            menuBar_txtMemberName.Text = user.getLogin();
         }
 
-        private string SetButtonConnectionText(int typeUser)
+        private string SetButtonConnectionText(int idTypeUser)
         {
             string connect = "Connexion";
             string disconnect = "Déconnexion";
-            return (typeUser == 0) ? connect : disconnect;
+            return (idTypeUser == 0) ? connect : disconnect;
         }
 
-        private string SetTxtBoxMemberNameText(int typeUser)
+        private User CnxUser(int id)
         {
-            string connect = "unknow user";
-            string disconnect = "Member";
-            return (typeUser == 0) ? connect : disconnect;
+            User user = new User(id);
+            user.setPassword(coAndCoDBDataSet.Tables["User"].Rows[id][1].ToString());
+            user.setLogin(coAndCoDBDataSet.Tables["User"].Rows[id][2].ToString());
+            int tid = Convert.ToInt32(coAndCoDBDataSet.Tables["User"].Rows[id][3].ToString());
+            user.setIdTypeUser(tid);
+            user.setLabelTypeUser(coAndCoDBDataSet.Tables["type_User"].Rows[tid][1].ToString());
+            return user;
+        }
+
+        private ArrayList UserLoginList()
+        {
+            ArrayList userLoginList = new ArrayList();
+            DataTable userTable = coAndCoDBDataSet.Tables["User"];
+            foreach( DataRow Row in userTable.Rows )
+            {
+                userLoginList.Add(Row[2]);
+            }
+            return userLoginList;
         }
     }
-       
+
     
 }

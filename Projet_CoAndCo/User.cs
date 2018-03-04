@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Projet_CoAndCo
 {
@@ -15,24 +16,24 @@ namespace Projet_CoAndCo
         private string _labelTypeUser;
 
         // Accessors
-        public int GetIdUser() { return this._idUser; }
-        public string GetPassword() { return this._password; }
-        public string GetLogin() { return this._login; }
-        public int GetIdTypeUser() { return this._idTypeUser; }
-        public string GetLabelTypeUser() { return this._labelTypeUser; }
+        public int getIdUser() { return this._idUser; }
+        public string getPassword() { return this._password; }
+        public string getLogin() { return this._login; }
+        public int getIdTypeUser() { return this._idTypeUser; }
+        public string getLabelTypeUser() { return this._labelTypeUser; }
 
         // Mutators
-        private void SetIdUser(int id) { this._idUser = id; }
-        public void SetPassword(string password) { this._password = password; }
-        public void SetLogin(string login) { this._login = login; }
-        private void SetIdTypeUser(int id) { this._idTypeUser = id; }
-        public void SetLabelTypeUser(string label) { this._labelTypeUser = label; }
+        private void setIdUser(int id) { this._idUser = id; }
+        public void setPassword(string password) { this._password = password; }
+        public void setLogin(string login) { this._login = login; }
+        public void setIdTypeUser(int id) { this._idTypeUser = id; }
+        public void setLabelTypeUser(string label) { this._labelTypeUser = label; }
 
         // Constructor
-        public User(int id = 0, int id_type = 0)
+        public User(int id = 0)
         {
-            this.SetIdUser(id);
-            this.SetIdTypeUser(id_type);
+            this.setIdUser(id);
         }
+        
     }
 }

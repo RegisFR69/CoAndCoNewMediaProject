@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Projet_CoAndCo
 {
     public partial class frmMenu : Form
     {
+        User user;
+
         public frmMenu()
         {
             InitializeComponent();
-            User user = new User(0, 0);
-            ShowMenus(user.GetIdUser());
         }
 
         // event functions
@@ -25,18 +26,20 @@ namespace Projet_CoAndCo
             // Show form Login
             ShowFormLogin();
 
-            // Display menu depending on type user
-            int typeUser = Convert.ToInt32(menuBar_lblIdTypeUser.Text);
-            ShowMenus(typeUser);
         }
-            
-       
+
+        private void menuBar_lblIdUser_TextChanged(object sender, EventArgs e)
+        {
+            // Display menu depending on user
+            int idUser = Convert.ToInt32(menuBar_lblIdUser.Text);
+            CnxUser(idUser);
+        }
+
 
         private void ShowFormLogin()
         {
-            Form FrmLogin = new frmLogin(menuBar_lblIdTypeUser);
+            Form FrmLogin = new frmLogin(menuBar_lblIdUser);
             FrmLogin.ShowDialog(this);
-
         }
         //
         // MenuFichier Event
@@ -68,9 +71,12 @@ namespace Projet_CoAndCo
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'coAndCoDBDataSet.User'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+
             this.userTableAdapter.Fill(this.coAndCoDBDataSet.User);
-            menuBar_txtMemberName.Text = coAndCoDBDataSet.User.Rows[1][2].ToString();
+            this.type_UserTableAdapter.Fill(this.coAndCoDBDataSet.Type_User);
+            user = CnxUser(0);
+            ShowMenus(user);
         }
+     
     }
 }

@@ -513,7 +513,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNationality;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private CoAndCoDBDataSet coAndCoDBDataSet;
+        //private CoAndCoDBDataSet coAndCoDBDataSet;
         private System.Windows.Forms.BindingSource genreBindingSource;
         private CoAndCoDBDataSetTableAdapters.GenreTableAdapter genreTableAdapter;
         private System.Windows.Forms.BindingSource NationalityBindingSource;

@@ -40,6 +40,7 @@ namespace Projet_CoAndCo
                     ShowMenuAdmin(false);
                     break;
                 case 2: // Admin
+                case 3: // SuperAdmin
                     ShowMenuMember(true);
                     ShowMenuAdmin(true);
                     break;
@@ -50,13 +51,14 @@ namespace Projet_CoAndCo
             }
             menuBar_btnConnection.Text = SetButtonConnectionText(id);
             menuBar_txtMemberName.Text = user.getLogin();
+
         }
 
         private string SetButtonConnectionText(int idTypeUser)
         {
-            string connect = "Connexion";
-            string disconnect = "Déconnexion";
-            return (idTypeUser == 0) ? connect : disconnect;
+            //string connect = "Connexion";
+            //string disconnect = "Déconnexion";
+            return (idTypeUser == 0) ? CONNECT : DISCONNECT;
         }
 
         private User CnxUser(int id)
@@ -80,6 +82,8 @@ namespace Projet_CoAndCo
             }
             return userLoginList;
         }
+
+
     }
 
     

@@ -90,6 +90,7 @@
             // 
             // menuBar_menuFichier
             // 
+            this.menuBar_menuFichier.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.menuBar_menuFichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuBar_fichier_itemNewPlaylist,
             this.menuBar_fichier_separator1,
@@ -107,9 +108,9 @@
             this.menuBar_menuFichier.Name = "menuBar_menuFichier";
             this.menuBar_menuFichier.Size = new System.Drawing.Size(54, 20);
             this.menuBar_menuFichier.Text = "Fichier";
-            this.menuBar_menuFichier.DropDownClosed += new System.EventHandler(this.menuFichier_DropDownClosed);
-            this.menuBar_menuFichier.DropDownOpened += new System.EventHandler(this.menuFichier_DropDownOpened);
-            this.menuBar_menuFichier.MouseHover += new System.EventHandler(this.menuFichier_MouseHover);
+            this.menuBar_menuFichier.DropDownClosed += new System.EventHandler(this.menuBar_menuFichier_DropDownClosed);
+            this.menuBar_menuFichier.MouseEnter += new System.EventHandler(this.menuBar_menuFichier_MouseEnter);
+            this.menuBar_menuFichier.MouseLeave += new System.EventHandler(this.menuBar_menuFichier_MouseLeave);
             // 
             // menuBar_fichier_itemNewPlaylist
             // 
@@ -207,8 +208,7 @@
             this.menuBar_menuAffichage.Name = "menuBar_menuAffichage";
             this.menuBar_menuAffichage.Size = new System.Drawing.Size(70, 20);
             this.menuBar_menuAffichage.Text = "Affichage";
-            this.menuBar_menuAffichage.DropDownClosed += new System.EventHandler(this.menuAffichage_DropDownClosed);
-            this.menuBar_menuAffichage.DropDownOpened += new System.EventHandler(this.menuAffichage_DropDownOpened);
+            this.menuBar_menuAffichage.MouseEnter += new System.EventHandler(this.menuBar_menuAffichage_MouseEnter);
             // 
             // menuBar_affichage_itemListe
             // 
@@ -458,6 +458,7 @@
             this.menuBar_lblIdUser.Name = "menuBar_lblIdUser";
             this.menuBar_lblIdUser.Size = new System.Drawing.Size(25, 20);
             this.menuBar_lblIdUser.Text = "0";
+            this.menuBar_lblIdUser.Visible = false;
             this.menuBar_lblIdUser.TextChanged += new System.EventHandler(this.menuBar_lblIdUser_TextChanged);
             // 
             // typeUserBindingSource

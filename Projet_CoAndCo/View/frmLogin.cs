@@ -14,13 +14,12 @@ namespace Projet_CoAndCo
 {
     public partial class frmLogin : Form
     {
-        private ToolStripMenuItem lblidUser = new ToolStripMenuItem();
-        private int idUser;
+        private User loginUser;
 
-        public frmLogin(ToolStripMenuItem user)
+        public frmLogin(User user)
         {
             InitializeComponent();
-            this.lblidUser = user;
+            loginUser = user;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -28,31 +27,16 @@ namespace Projet_CoAndCo
              this.userTableAdapter.Fill(this.coAndCoDBDataSetLogin.User);
         }
 
-        private void txtId_Login_Validating(object sender, CancelEventArgs e)
+        private void txtLogin_Validating(object sender, CancelEventArgs e)
         {
-            if (txtId_Login.Text == "")
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                ArrayList loginList = UserLoginList();
-                if (loginList.Contains(txtId_Login.Text))
-                {
-                    NewUser(false);
-                    idUser = loginList.IndexOf(txtId_Login.Text);
-                }
-                else
-                {
-                    NewUser(true);
-                    idUser = loginList.Count;
-                }
-            }
+            if (txtLogin.Text == "") e.Cancel = true;
+
+            newUser(!loginValidation(loginUser));
         }
 
         private void btnValid_Login_Click(object sender, EventArgs e)
         {
-            if (ValidateConnexion())
+            if (ValidateConnexion(loginUser))
             {
                 this.Close();
             }

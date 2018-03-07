@@ -15,7 +15,7 @@ namespace Projet_CoAndCo
     {
         const string CONNECT = "Connexion";
         const string DISCONNECT = "Déconnexion";
-        User user;
+        User user = new User();
 
         public frmMenu()
         {
@@ -34,24 +34,25 @@ namespace Projet_CoAndCo
             {
                 menuBar_lblIdUser.Text = "0";
             }
-
-            
-
         }
 
         private void menuBar_lblIdUser_TextChanged(object sender, EventArgs e)
         {
             // Display menu depending on user
-            int idUser = Convert.ToInt32(menuBar_lblIdUser.Text);
+            /*int idUser = Convert.ToInt32(menuBar_lblIdUser.Text);
             user = CnxUser(idUser);
-            ShowMenus(user);
+            ShowMenus(user);*/
         }
 
 
         private void ShowFormLogin()
         {
-            Form FrmLogin = new frmLogin(menuBar_lblIdUser);
+            /*Form FrmLogin = new frmLogin(menuBar_lblIdUser);
+            FrmLogin.ShowDialog(this);*/
+            Form FrmLogin = new frmLogin(user);
             FrmLogin.ShowDialog(this);
+            menuBar_txtMemberName.Text = user.getLogin();
+            ShowMenus(user);
         }
 
         //
@@ -59,8 +60,8 @@ namespace Projet_CoAndCo
         // -----------------
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            this.userTableAdapter.Fill(this.coAndCoDBDataSet.User);
-            this.type_UserTableAdapter.Fill(this.coAndCoDBDataSet.Type_User);
+            this.userTableAdapter.Fill(this.coAndCoDBDataSetMenu.User);
+            this.type_UserTableAdapter.Fill(this.coAndCoDBDataSetMenu.Type_User);
             user = CnxUser(0);
             ShowMenus(user);
         }
@@ -143,7 +144,7 @@ namespace Projet_CoAndCo
         }
         private void menuBar_menuHelp_MouseLeave(object sender, EventArgs e)
         {
-            if (!menuBar_menuHelp.Pressed) this.menuBar_menuTools.ForeColor = Color.White;
+            if (!menuBar_menuHelp.Pressed) this.menuBar_menuHelp.ForeColor = Color.White;
         }
         private void menuBar_menuHelp_DropDownClosed(object sender, EventArgs e)
         {

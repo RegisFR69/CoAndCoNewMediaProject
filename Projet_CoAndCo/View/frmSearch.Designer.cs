@@ -59,7 +59,7 @@
             this.lblNationality = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.genreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coAndCoDBDataSet = new Projet_CoAndCo.CoAndCoDBDataSet();
+            //this.coAndCoDBDataSetMenu = new Projet_CoAndCo.CoAndCoDBDataSet();
             this.genreTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.GenreTableAdapter();
             this.NationalityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelMedia.SuspendLayout();
@@ -69,7 +69,7 @@
             this.panelTri.SuspendLayout();
             this.grpBoxFiltre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NationalityBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -440,13 +440,13 @@
             // genreBindingSource
             // 
             this.genreBindingSource.DataMember = "Genre";
-            this.genreBindingSource.DataSource = this.coAndCoDBDataSet;
+            //this.genreBindingSource.DataSource = this.coAndCoDBDataSetMenu;
             this.genreBindingSource.CurrentChanged += new System.EventHandler(this.genreBindingSource_CurrentChanged);
             // 
             // coAndCoDBDataSet
             // 
-            this.coAndCoDBDataSet.DataSetName = "CoAndCoDBDataSet";
-            this.coAndCoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.coAndCoDBDataSetMenu.DataSetName = "CoAndCoDBDataSet";
+            //this.coAndCoDBDataSetMenu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // genreTableAdapter
             // 
@@ -477,7 +477,7 @@
             this.grpBoxFiltre.ResumeLayout(false);
             this.grpBoxFiltre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NationalityBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

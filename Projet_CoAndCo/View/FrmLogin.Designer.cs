@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblTitre_Login = new System.Windows.Forms.Label();
-            this.lblId_Login = new System.Windows.Forms.Label();
-            this.lblPass_Login = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.lblPass2_Login = new System.Windows.Forms.Label();
-            this.txtId_Login = new System.Windows.Forms.TextBox();
-            this.txtPass_Login = new System.Windows.Forms.TextBox();
-            this.txtPass2_Login = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.btnValid_Login = new System.Windows.Forms.Button();
             this.coAndCoDBDataSetLogin = new Projet_CoAndCo.CoAndCoDBDataSet();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,27 +57,27 @@
             this.lblTitre_Login.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTitre_Login.Visible = false;
             // 
-            // lblId_Login
+            // lblLogin
             // 
-            this.lblId_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId_Login.Location = new System.Drawing.Point(0, 40);
-            this.lblId_Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblId_Login.Name = "lblId_Login";
-            this.lblId_Login.Size = new System.Drawing.Size(130, 40);
-            this.lblId_Login.TabIndex = 1;
-            this.lblId_Login.Text = "Identifiant :";
-            this.lblId_Login.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(0, 40);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(130, 40);
+            this.lblLogin.TabIndex = 1;
+            this.lblLogin.Text = "Login :";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblPass_Login
+            // lblPassword
             // 
-            this.lblPass_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass_Login.Location = new System.Drawing.Point(0, 80);
-            this.lblPass_Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPass_Login.Name = "lblPass_Login";
-            this.lblPass_Login.Size = new System.Drawing.Size(130, 40);
-            this.lblPass_Login.TabIndex = 2;
-            this.lblPass_Login.Text = "Mot de passe :";
-            this.lblPass_Login.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(0, 80);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(130, 40);
+            this.lblPassword.TabIndex = 2;
+            this.lblPassword.Text = "Mot de passe :";
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblPass2_Login
             // 
@@ -91,31 +91,31 @@
             this.lblPass2_Login.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblPass2_Login.Visible = false;
             // 
-            // txtId_Login
+            // txtLogin
             // 
-            this.txtId_Login.Location = new System.Drawing.Point(140, 50);
-            this.txtId_Login.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId_Login.Name = "txtId_Login";
-            this.txtId_Login.Size = new System.Drawing.Size(130, 20);
-            this.txtId_Login.TabIndex = 4;
-            this.txtId_Login.Validating += new System.ComponentModel.CancelEventHandler(this.txtId_Login_Validating);
+            this.txtLogin.Location = new System.Drawing.Point(140, 50);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(130, 20);
+            this.txtLogin.TabIndex = 4;
+            this.txtLogin.Validating += new System.ComponentModel.CancelEventHandler(this.txtLogin_Validating);
             // 
-            // txtPass_Login
+            // txtPassword
             // 
-            this.txtPass_Login.Location = new System.Drawing.Point(140, 90);
-            this.txtPass_Login.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPass_Login.Name = "txtPass_Login";
-            this.txtPass_Login.Size = new System.Drawing.Size(130, 20);
-            this.txtPass_Login.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(140, 90);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(130, 20);
+            this.txtPassword.TabIndex = 5;
             // 
-            // txtPass2_Login
+            // txtPassword2
             // 
-            this.txtPass2_Login.Location = new System.Drawing.Point(140, 130);
-            this.txtPass2_Login.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPass2_Login.Name = "txtPass2_Login";
-            this.txtPass2_Login.Size = new System.Drawing.Size(130, 20);
-            this.txtPass2_Login.TabIndex = 6;
-            this.txtPass2_Login.Visible = false;
+            this.txtPassword2.Location = new System.Drawing.Point(140, 130);
+            this.txtPassword2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword2.Name = "txtPassword2";
+            this.txtPassword2.Size = new System.Drawing.Size(130, 20);
+            this.txtPassword2.TabIndex = 6;
+            this.txtPassword2.Visible = false;
             // 
             // btnValid_Login
             // 
@@ -152,12 +152,12 @@
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(294, 211);
             this.Controls.Add(this.btnValid_Login);
-            this.Controls.Add(this.txtPass2_Login);
-            this.Controls.Add(this.txtPass_Login);
-            this.Controls.Add(this.txtId_Login);
+            this.Controls.Add(this.txtPassword2);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.lblPass2_Login);
-            this.Controls.Add(this.lblPass_Login);
-            this.Controls.Add(this.lblId_Login);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblTitre_Login);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -178,12 +178,12 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitre_Login;
-        private System.Windows.Forms.Label lblId_Login;
-        private System.Windows.Forms.Label lblPass_Login;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblPass2_Login;
-        private System.Windows.Forms.TextBox txtId_Login;
-        private System.Windows.Forms.TextBox txtPass_Login;
-        private System.Windows.Forms.TextBox txtPass2_Login;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtPassword2;
         private System.Windows.Forms.Button btnValid_Login;
         private CoAndCoDBDataSet coAndCoDBDataSetLogin;
         private System.Windows.Forms.BindingSource userBindingSource;

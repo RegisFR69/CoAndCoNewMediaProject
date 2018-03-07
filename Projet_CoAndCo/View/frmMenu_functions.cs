@@ -64,18 +64,18 @@ namespace Projet_CoAndCo
         private User CnxUser(int id)
         {
             User user = new User(id);
-            user.setPassword(coAndCoDBDataSet.Tables["User"].Rows[id][1].ToString());
-            user.setLogin(coAndCoDBDataSet.Tables["User"].Rows[id][2].ToString());
-            int tid = Convert.ToInt32(coAndCoDBDataSet.Tables["User"].Rows[id][3].ToString());
+            user.setPassword(coAndCoDBDataSetMenu.Tables["User"].Rows[id][1].ToString());
+            user.setLogin(coAndCoDBDataSetMenu.Tables["User"].Rows[id][2].ToString());
+            int tid = Convert.ToInt32(coAndCoDBDataSetMenu.Tables["User"].Rows[id][3].ToString());
             user.setIdTypeUser(tid);
-            user.setLabelTypeUser(coAndCoDBDataSet.Tables["type_User"].Rows[tid][1].ToString());
+            user.setLabelTypeUser(coAndCoDBDataSetMenu.Tables["type_User"].Rows[tid][1].ToString());
             return user;
         }
 
         private ArrayList UserLoginList()
         {
             ArrayList userLoginList = new ArrayList();
-            DataTable userTable = coAndCoDBDataSet.Tables["User"];
+            DataTable userTable = coAndCoDBDataSetMenu.Tables["User"];
             foreach( DataRow Row in userTable.Rows )
             {
                 userLoginList.Add(Row[2]);

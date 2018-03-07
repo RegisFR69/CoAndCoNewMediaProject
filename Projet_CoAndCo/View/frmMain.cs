@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Projet_CoAndCo
 {
-    public partial class frmMain : Projet_CoAndCo.frmMenu
+    public partial class frmMain : frmMenu
     {
         public frmMain()
         {

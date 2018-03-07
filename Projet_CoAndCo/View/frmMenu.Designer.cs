@@ -78,13 +78,13 @@
             this.menuBar_txtMemberName = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar_lblIdUser = new System.Windows.Forms.ToolStripMenuItem();
             this.typeUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coAndCoDBDataSet = new Projet_CoAndCo.CoAndCoDBDataSet();
+            this.coAndCoDBDataSetMenu = new Projet_CoAndCo.CoAndCoDBDataSet();
             this.type_UserTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.Type_UserTableAdapter();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.UserTableAdapter();
             this.menuMenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.typeUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,7 +208,9 @@
             this.menuBar_menuAffichage.Name = "menuBar_menuAffichage";
             this.menuBar_menuAffichage.Size = new System.Drawing.Size(70, 20);
             this.menuBar_menuAffichage.Text = "Affichage";
+            this.menuBar_menuAffichage.DropDownClosed += new System.EventHandler(this.menuBar_menuAffichage_DropDownClosed);
             this.menuBar_menuAffichage.MouseEnter += new System.EventHandler(this.menuBar_menuAffichage_MouseEnter);
+            this.menuBar_menuAffichage.MouseLeave += new System.EventHandler(this.menuBar_menuAffichage_MouseLeave);
             // 
             // menuBar_affichage_itemListe
             // 
@@ -281,6 +283,9 @@
             this.menuBar_menuMedia.Name = "menuBar_menuMedia";
             this.menuBar_menuMedia.Size = new System.Drawing.Size(52, 20);
             this.menuBar_menuMedia.Text = "Media";
+            this.menuBar_menuMedia.DropDownClosed += new System.EventHandler(this.menuBar_menuMedia_DropDownClosed);
+            this.menuBar_menuMedia.MouseEnter += new System.EventHandler(this.menuBar_menuMedia_MouseEnter);
+            this.menuBar_menuMedia.MouseLeave += new System.EventHandler(this.menuBar_menuMedia_MouseLeave);
             // 
             // menuBar_media_itemAdd
             // 
@@ -318,30 +323,33 @@
             this.menuBar_menuPlaylist.Name = "menuBar_menuPlaylist";
             this.menuBar_menuPlaylist.Size = new System.Drawing.Size(56, 20);
             this.menuBar_menuPlaylist.Text = "Playlist";
+            this.menuBar_menuPlaylist.DropDownClosed += new System.EventHandler(this.menuBar_menuPlaylist_DropDownClosed);
+            this.menuBar_menuPlaylist.MouseEnter += new System.EventHandler(this.menuBar_menuPlaylist_MouseEnter);
+            this.menuBar_menuPlaylist.MouseLeave += new System.EventHandler(this.menuBar_menuPlaylist_MouseLeave);
             // 
             // menuBar_Playlist_itemAdd
             // 
             this.menuBar_Playlist_itemAdd.Name = "menuBar_Playlist_itemAdd";
             this.menuBar_Playlist_itemAdd.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.menuBar_Playlist_itemAdd.Size = new System.Drawing.Size(151, 22);
+            this.menuBar_Playlist_itemAdd.Size = new System.Drawing.Size(152, 22);
             this.menuBar_Playlist_itemAdd.Text = "Ajouter";
             // 
             // menuBar_playlist_itemUpdate
             // 
             this.menuBar_playlist_itemUpdate.Name = "menuBar_playlist_itemUpdate";
-            this.menuBar_playlist_itemUpdate.Size = new System.Drawing.Size(151, 22);
+            this.menuBar_playlist_itemUpdate.Size = new System.Drawing.Size(152, 22);
             this.menuBar_playlist_itemUpdate.Text = "Modifier";
             // 
             // menuBar_playlist_itemSearch
             // 
             this.menuBar_playlist_itemSearch.Name = "menuBar_playlist_itemSearch";
-            this.menuBar_playlist_itemSearch.Size = new System.Drawing.Size(151, 22);
+            this.menuBar_playlist_itemSearch.Size = new System.Drawing.Size(152, 22);
             this.menuBar_playlist_itemSearch.Text = "Rechercher";
             // 
             // menuBar_playlist_itemDelete
             // 
             this.menuBar_playlist_itemDelete.Name = "menuBar_playlist_itemDelete";
-            this.menuBar_playlist_itemDelete.Size = new System.Drawing.Size(151, 22);
+            this.menuBar_playlist_itemDelete.Size = new System.Drawing.Size(152, 22);
             this.menuBar_playlist_itemDelete.Text = "Supprimer";
             // 
             // menuBar_menuTools
@@ -354,6 +362,9 @@
             this.menuBar_menuTools.Name = "menuBar_menuTools";
             this.menuBar_menuTools.Size = new System.Drawing.Size(50, 20);
             this.menuBar_menuTools.Text = "Outils";
+            this.menuBar_menuTools.DropDownClosed += new System.EventHandler(this.menuBar_menuTools_DropDownClosed);
+            this.menuBar_menuTools.MouseEnter += new System.EventHandler(this.menuBar_menuTools_MouseEnter);
+            this.menuBar_menuTools.MouseLeave += new System.EventHandler(this.menuBar_menuTools_MouseLeave);
             // 
             // menuBar_tools_itemPath
             // 
@@ -384,6 +395,9 @@
             this.menuBar_menuHelp.Name = "menuBar_menuHelp";
             this.menuBar_menuHelp.Size = new System.Drawing.Size(43, 20);
             this.menuBar_menuHelp.Text = "Aide";
+            this.menuBar_menuHelp.DropDownClosed += new System.EventHandler(this.menuBar_menuHelp_DropDownClosed);
+            this.menuBar_menuHelp.MouseEnter += new System.EventHandler(this.menuBar_menuHelp_MouseEnter);
+            this.menuBar_menuHelp.MouseLeave += new System.EventHandler(this.menuBar_menuHelp_MouseLeave);
             // 
             // menuBar_help_itemSummary
             // 
@@ -464,12 +478,12 @@
             // typeUserBindingSource
             // 
             this.typeUserBindingSource.DataMember = "Type_User";
-            this.typeUserBindingSource.DataSource = this.coAndCoDBDataSet;
+            this.typeUserBindingSource.DataSource = this.coAndCoDBDataSetMenu;
             // 
-            // coAndCoDBDataSet
+            // coAndCoDBDataSetMenu
             // 
-            this.coAndCoDBDataSet.DataSetName = "CoAndCoDBDataSet";
-            this.coAndCoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.coAndCoDBDataSetMenu.DataSetName = "CoAndCoDBDataSetMenu";
+            this.coAndCoDBDataSetMenu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // type_UserTableAdapter
             // 
@@ -478,7 +492,7 @@
             // userBindingSource
             // 
             this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.coAndCoDBDataSet;
+            this.userBindingSource.DataSource = this.coAndCoDBDataSetMenu;
             // 
             // userTableAdapter
             // 
@@ -500,7 +514,7 @@
             this.menuMenuBar.ResumeLayout(false);
             this.menuMenuBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.typeUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -556,7 +570,7 @@
         private System.Windows.Forms.MenuStrip menuMenuBar;
         private System.Windows.Forms.ToolStripMenuItem menuBar_txtMemberName;
         private System.Windows.Forms.ToolStripMenuItem menuBar_lblIdUser;
-        protected CoAndCoDBDataSet coAndCoDBDataSet;
+        protected CoAndCoDBDataSet coAndCoDBDataSetMenu;
         private CoAndCoDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
         private System.Windows.Forms.BindingSource typeUserBindingSource;
         private CoAndCoDBDataSetTableAdapters.Type_UserTableAdapter type_UserTableAdapter;

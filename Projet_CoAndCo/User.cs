@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Projet_CoAndCo
 {
-    class User
+    public class User
     {
         private int _idUser;
         private string _password;
@@ -23,17 +23,24 @@ namespace Projet_CoAndCo
         public string getLabelTypeUser() { return this._labelTypeUser; }
 
         // Mutators
-        private void setIdUser(int id) { this._idUser = id; }
+        public void setIdUser(int id) { this._idUser = id; }
         public void setPassword(string password) { this._password = password; }
         public void setLogin(string login) { this._login = login; }
         public void setIdTypeUser(int id) { this._idTypeUser = id; }
         public void setLabelTypeUser(string label) { this._labelTypeUser = label; }
 
         // Constructor
-        public User(int id = 0)
+        public User()
+        {
+            this.setIdUser(0);
+            this.setPassword("");
+            this.setLogin("unknow user");
+            this.setIdTypeUser(0);
+            this.setLabelTypeUser("user");
+        }
+        public User(int id)
         {
             this.setIdUser(id);
         }
-        
     }
 }

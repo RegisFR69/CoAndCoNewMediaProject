@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Projet_CoAndCo
 {
@@ -19,6 +20,23 @@ namespace Projet_CoAndCo
             return userLoginList;
         }
 
+        private Boolean loginValidation(User user)
+        {
+            user.setLogin(txtLogin.Text);
+            ArrayList loginList = UserLoginList();
+            if (loginList.Contains(txtLogin.Text))
+            {
+                user.setIdUser(loginList.IndexOf(txtLogin.Text));
+                return true;
+            }
+            else
+            {
+                user.setIdUser(loginList.Count);
+                return false;
+            }
+        }
+
+
         // renvoie vrai si login et password correspondent
         private Boolean userValidation(User user)
         {
@@ -27,66 +45,64 @@ namespace Projet_CoAndCo
             string password = ((string)row[1]).Trim();
             if ( user.getLogin() == login && user.getPassword() == password)
             {
+                user.setIdTypeUser((int)row[3]);
                 return true;
             }
             return false;
         }
 
-        private Boolean ValidateConnexion()
+        private Boolean ValidateConnexion(User user)
         {
-            if (txtPass2_Login.Visible)
+            if (txtPassword2.Visible)
             {
-                if (txtPass_Login.Text == txtPass2_Login.Text)
+                if (txtPassword.Text == txtPassword2.Text)
                 {
-                    lblidUser.Text = addNewUser();
+                    addNewUser(user);
                     return true;
                 }
                 else
                 {
                     lblTitre_Login.Text = "mots de passe différents !";
-                    txtPass_Login.Text = "";
-                    txtPass2_Login.Text = "";
+                    txtPassword.Text = "";
+                    txtPassword2.Text = "";
                 }
             }
             else
             {
-                User user = new User(idUser);
-                user.setLogin(txtId_Login.Text);
-                user.setPassword(txtPass_Login.Text);
+                user.setPassword(txtPassword.Text);
 
                 if (userValidation(user))
                 {
-                    lblidUser.Text = idUser.ToString();
                     return true;
                 }
                 else
                 {
                     lblTitre_Login.Text = "mot de passe érroné !";
-                    txtPass_Login.Text = "";
+                    txtPassword.Text = "";
                 }
             }
             return false;
         }
 
-        private string addNewUser()
+        private void addNewUser(User user)
         {
             CoAndCoDBDataSet.UserRow newUserRow;
             newUserRow = coAndCoDBDataSetLogin.User.NewUserRow();
-            newUserRow.id_user = idUser;
-            newUserRow.password = txtPass_Login.Text;
-            newUserRow.login = txtId_Login.Text;
+            newUserRow.id_user = user.getIdUser();
+            user.setPassword(txtPassword.Text);
+            newUserRow.password = user.getPassword();
+            newUserRow.login = user.getLogin();
+            user.setIdTypeUser(1);
             newUserRow.id_type_user = 1;
             this.coAndCoDBDataSetLogin.User.Rows.Add(newUserRow);
             this.userTableAdapter.Update(this.coAndCoDBDataSetLogin.User);
-            return idUser.ToString();
         }
 
-        private void NewUser(Boolean value)
+        private void newUser(Boolean value)
         {
             lblTitre_Login.Visible = value;
             lblPass2_Login.Visible = value;
-            txtPass2_Login.Visible = value;
+            txtPassword2.Visible = value;
         }
-
     }  
 }

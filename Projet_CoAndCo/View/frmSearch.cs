@@ -230,15 +230,15 @@ namespace Projet_CoAndCo
         private void frmSearch_Load(object sender, EventArgs e)
         {
             
-            this.genreTableAdapter.Fill(this.coAndCoDBDataSet.Genre);
+            //this.genreTableAdapter.Fill(this.coAndCoDBDataSetMenu.Genre);
             getItemGenre();
         }
 
         private void getItemGenre()
         {
-            for (int i = 0; i < coAndCoDBDataSet.Genre.Rows.Count; i++)
+            //for (int i = 0; i < coAndCoDBDataSetMenu.Genre.Rows.Count; i++)
             {
-                chkLstBoxGenre.Items.Add(coAndCoDBDataSet.Genre.Rows[i][1].ToString());
+                //chkLstBoxGenre.Items.Add(coAndCoDBDataSetMenu.Genre.Rows[i][1].ToString());
             }
         }
 

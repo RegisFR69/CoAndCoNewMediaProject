@@ -1,1 +1,7 @@
-.vs/
+/.vs
+/bin
+/obj
+CoAndCoMediaProject.csproj
+Projet_CoAndCo.sln
+/Projet_CoAndCo/bin
+/Projet_CoAndCo/obj

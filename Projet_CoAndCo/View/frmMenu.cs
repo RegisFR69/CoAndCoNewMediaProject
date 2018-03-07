@@ -25,34 +25,16 @@ namespace Projet_CoAndCo
         // event functions
         private void buttonConnection_Click(object sender, EventArgs e)
         {
-            if (menuBar_btnConnection.Text == CONNECT)
-            {
-                // Show form Login
-                ShowFormLogin();
-            }
-            else
-            {
-                menuBar_lblIdUser.Text = "0";
-            }
-        }
+            if (menuBar_btnConnection.Text == CONNECT) ShowFormLogin();
+            else user = new User();
 
-        private void menuBar_lblIdUser_TextChanged(object sender, EventArgs e)
-        {
-            // Display menu depending on user
-            /*int idUser = Convert.ToInt32(menuBar_lblIdUser.Text);
-            user = CnxUser(idUser);
-            ShowMenus(user);*/
+            ShowMenus(user);
         }
-
 
         private void ShowFormLogin()
         {
-            /*Form FrmLogin = new frmLogin(menuBar_lblIdUser);
-            FrmLogin.ShowDialog(this);*/
             Form FrmLogin = new frmLogin(user);
             FrmLogin.ShowDialog(this);
-            menuBar_txtMemberName.Text = user.getLogin();
-            ShowMenus(user);
         }
 
         //
@@ -60,9 +42,6 @@ namespace Projet_CoAndCo
         // -----------------
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            this.userTableAdapter.Fill(this.coAndCoDBDataSetMenu.User);
-            this.type_UserTableAdapter.Fill(this.coAndCoDBDataSetMenu.Type_User);
-            user = CnxUser(0);
             ShowMenus(user);
         }
 

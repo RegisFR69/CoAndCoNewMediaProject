@@ -76,15 +76,12 @@
             this.menuBar_btnConnection = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMenuBar = new System.Windows.Forms.MenuStrip();
             this.menuBar_txtMemberName = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuBar_lblIdUser = new System.Windows.Forms.ToolStripMenuItem();
             this.typeUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coAndCoDBDataSetMenu = new Projet_CoAndCo.CoAndCoDBDataSet();
             this.type_UserTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.Type_UserTableAdapter();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.UserTableAdapter();
             this.menuMenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.typeUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -447,8 +444,7 @@
             this.menuBar_menuTools,
             this.menuBar_menuHelp,
             this.menuBar_btnConnection,
-            this.menuBar_txtMemberName,
-            this.menuBar_lblIdUser});
+            this.menuBar_txtMemberName});
             this.menuMenuBar.Location = new System.Drawing.Point(0, 0);
             this.menuMenuBar.Name = "menuMenuBar";
             this.menuMenuBar.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
@@ -465,34 +461,9 @@
             this.menuBar_txtMemberName.Size = new System.Drawing.Size(87, 20);
             this.menuBar_txtMemberName.Text = "unknow user";
             // 
-            // menuBar_lblIdUser
-            // 
-            this.menuBar_lblIdUser.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuBar_lblIdUser.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.menuBar_lblIdUser.Name = "menuBar_lblIdUser";
-            this.menuBar_lblIdUser.Size = new System.Drawing.Size(25, 20);
-            this.menuBar_lblIdUser.Text = "0";
-            this.menuBar_lblIdUser.Visible = false;
-            this.menuBar_lblIdUser.TextChanged += new System.EventHandler(this.menuBar_lblIdUser_TextChanged);
-            // 
-            // typeUserBindingSource
-            // 
-            this.typeUserBindingSource.DataMember = "Type_User";
-            this.typeUserBindingSource.DataSource = this.coAndCoDBDataSetMenu;
-            // 
-            // coAndCoDBDataSetMenu
-            // 
-            this.coAndCoDBDataSetMenu.DataSetName = "CoAndCoDBDataSetMenu";
-            this.coAndCoDBDataSetMenu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // type_UserTableAdapter
             // 
             this.type_UserTableAdapter.ClearBeforeFill = true;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.coAndCoDBDataSetMenu;
             // 
             // userTableAdapter
             // 
@@ -514,7 +485,6 @@
             this.menuMenuBar.ResumeLayout(false);
             this.menuMenuBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.typeUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -569,8 +539,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuBar_btnConnection;
         private System.Windows.Forms.MenuStrip menuMenuBar;
         private System.Windows.Forms.ToolStripMenuItem menuBar_txtMemberName;
-        private System.Windows.Forms.ToolStripMenuItem menuBar_lblIdUser;
-        protected CoAndCoDBDataSet coAndCoDBDataSetMenu;
         private CoAndCoDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
         private System.Windows.Forms.BindingSource typeUserBindingSource;
         private CoAndCoDBDataSetTableAdapters.Type_UserTableAdapter type_UserTableAdapter;

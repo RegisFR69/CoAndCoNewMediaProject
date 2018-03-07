@@ -31,9 +31,7 @@ namespace Projet_CoAndCo
         // Display menu depending on type user 
         private void ShowMenus(User user)
         {
-            int id = user.getIdTypeUser();
-            //int typeUser = user.getIdTypeUser;
-            switch (id)
+            switch (user.getIdTypeUser())
             {
                 case 1: // Member
                     ShowMenuMember(true);
@@ -49,41 +47,15 @@ namespace Projet_CoAndCo
                     ShowMenuAdmin(false);
                     break;
             }
-            menuBar_btnConnection.Text = SetButtonConnectionText(id);
+            menuBar_btnConnection.Text = SetButtonConnectionText(user.getIdTypeUser());
             menuBar_txtMemberName.Text = user.getLogin();
 
         }
 
         private string SetButtonConnectionText(int idTypeUser)
         {
-            //string connect = "Connexion";
-            //string disconnect = "Déconnexion";
             return (idTypeUser == 0) ? CONNECT : DISCONNECT;
         }
-
-        private User CnxUser(int id)
-        {
-            User user = new User(id);
-            user.setPassword(coAndCoDBDataSetMenu.Tables["User"].Rows[id][1].ToString());
-            user.setLogin(coAndCoDBDataSetMenu.Tables["User"].Rows[id][2].ToString());
-            int tid = Convert.ToInt32(coAndCoDBDataSetMenu.Tables["User"].Rows[id][3].ToString());
-            user.setIdTypeUser(tid);
-            user.setLabelTypeUser(coAndCoDBDataSetMenu.Tables["type_User"].Rows[tid][1].ToString());
-            return user;
-        }
-
-        private ArrayList UserLoginList()
-        {
-            ArrayList userLoginList = new ArrayList();
-            DataTable userTable = coAndCoDBDataSetMenu.Tables["User"];
-            foreach( DataRow Row in userTable.Rows )
-            {
-                userLoginList.Add(Row[2]);
-            }
-            return userLoginList;
-        }
-
-
     }
 
     

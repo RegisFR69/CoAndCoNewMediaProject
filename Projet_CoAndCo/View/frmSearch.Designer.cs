@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearch));
             this.panelMedia = new System.Windows.Forms.GroupBox();
-            this.ckbBD = new System.Windows.Forms.CheckBox();
-            this.ckbBook = new System.Windows.Forms.CheckBox();
-            this.ckbSerie = new System.Windows.Forms.CheckBox();
-            this.ckbMovie = new System.Windows.Forms.CheckBox();
-            this.ckbMusic = new System.Windows.Forms.CheckBox();
             this.gpbTri = new System.Windows.Forms.GroupBox();
             this.btnMaxTri = new System.Windows.Forms.Button();
             this.pnlYear = new System.Windows.Forms.Panel();
@@ -57,118 +52,39 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNationality = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.chkLstBoxNationality = new System.Windows.Forms.CheckedListBox();
+            this.release_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mediaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Projet_CoAndCo.Data.DataSet1();
             this.genreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.coAndCoDBDataSetMenu = new Projet_CoAndCo.CoAndCoDBDataSet();
-            this.genreTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.GenreTableAdapter();
-            this.NationalityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panelMedia.SuspendLayout();
+            this.genreTableAdapter = new Projet_CoAndCo.Data.DataSet1TableAdapters.GenreTableAdapter();
+            this.nationalityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nationalityTableAdapter = new Projet_CoAndCo.Data.DataSet1TableAdapters.NationalityTableAdapter();
+            this.type_MediaTableAdapter = new Projet_CoAndCo.Data.DataSet1TableAdapters.Type_MediaTableAdapter();
+            this.type_MediaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mediaTableAdapter = new Projet_CoAndCo.Data.DataSet1TableAdapters.MediaTableAdapter();
+            this.panelResult = new System.Windows.Forms.Panel();
             this.gpbTri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Max)).BeginInit();
             this.panelTri.SuspendLayout();
             this.grpBoxFiltre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NationalityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nationalityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.type_MediaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMedia
             // 
             this.panelMedia.BackColor = System.Drawing.Color.DarkGray;
-            this.panelMedia.Controls.Add(this.ckbBD);
-            this.panelMedia.Controls.Add(this.ckbBook);
-            this.panelMedia.Controls.Add(this.ckbSerie);
-            this.panelMedia.Controls.Add(this.ckbMovie);
-            this.panelMedia.Controls.Add(this.ckbMusic);
             this.panelMedia.Location = new System.Drawing.Point(8, 43);
             this.panelMedia.Name = "panelMedia";
             this.panelMedia.Size = new System.Drawing.Size(770, 57);
             this.panelMedia.TabIndex = 5;
             this.panelMedia.TabStop = false;
             this.panelMedia.Text = "Médias";
-            // 
-            // ckbBD
-            // 
-            this.ckbBD.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckbBD.BackColor = System.Drawing.Color.DarkGray;
-            this.ckbBD.FlatAppearance.BorderSize = 0;
-            this.ckbBD.FlatAppearance.CheckedBackColor = System.Drawing.Color.Turquoise;
-            this.ckbBD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
-            this.ckbBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckbBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbBD.Location = new System.Drawing.Point(120, 19);
-            this.ckbBD.Name = "ckbBD";
-            this.ckbBD.Size = new System.Drawing.Size(90, 23);
-            this.ckbBD.TabIndex = 4;
-            this.ckbBD.Text = "Bande Dessiné";
-            this.ckbBD.UseVisualStyleBackColor = false;
-            // 
-            // ckbBook
-            // 
-            this.ckbBook.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckbBook.BackColor = System.Drawing.Color.DarkGray;
-            this.ckbBook.FlatAppearance.BorderSize = 0;
-            this.ckbBook.FlatAppearance.CheckedBackColor = System.Drawing.Color.Turquoise;
-            this.ckbBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
-            this.ckbBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckbBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbBook.Location = new System.Drawing.Point(440, 19);
-            this.ckbBook.Name = "ckbBook";
-            this.ckbBook.Size = new System.Drawing.Size(90, 23);
-            this.ckbBook.TabIndex = 3;
-            this.ckbBook.Text = "Livres";
-            this.ckbBook.UseVisualStyleBackColor = false;
-            this.ckbBook.CheckedChanged += new System.EventHandler(this.ckbBook_CheckedChanged);
-            // 
-            // ckbSerie
-            // 
-            this.ckbSerie.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckbSerie.BackColor = System.Drawing.Color.DarkGray;
-            this.ckbSerie.FlatAppearance.BorderSize = 0;
-            this.ckbSerie.FlatAppearance.CheckedBackColor = System.Drawing.Color.Turquoise;
-            this.ckbSerie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
-            this.ckbSerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckbSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbSerie.Location = new System.Drawing.Point(226, 19);
-            this.ckbSerie.Name = "ckbSerie";
-            this.ckbSerie.Size = new System.Drawing.Size(90, 23);
-            this.ckbSerie.TabIndex = 2;
-            this.ckbSerie.Text = "Séries";
-            this.ckbSerie.UseVisualStyleBackColor = false;
-            // 
-            // ckbMovie
-            // 
-            this.ckbMovie.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckbMovie.BackColor = System.Drawing.Color.DarkGray;
-            this.ckbMovie.FlatAppearance.BorderSize = 0;
-            this.ckbMovie.FlatAppearance.CheckedBackColor = System.Drawing.Color.Turquoise;
-            this.ckbMovie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
-            this.ckbMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckbMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbMovie.Location = new System.Drawing.Point(332, 19);
-            this.ckbMovie.Name = "ckbMovie";
-            this.ckbMovie.Size = new System.Drawing.Size(90, 23);
-            this.ckbMovie.TabIndex = 1;
-            this.ckbMovie.Text = "Films";
-            this.ckbMovie.UseVisualStyleBackColor = false;
-            this.ckbMovie.CheckedChanged += new System.EventHandler(this.ckbMovie_CheckedChanged_1);
-            // 
-            // ckbMusic
-            // 
-            this.ckbMusic.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ckbMusic.BackColor = System.Drawing.Color.DarkGray;
-            this.ckbMusic.FlatAppearance.BorderSize = 0;
-            this.ckbMusic.FlatAppearance.CheckedBackColor = System.Drawing.Color.Turquoise;
-            this.ckbMusic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
-            this.ckbMusic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ckbMusic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbMusic.Location = new System.Drawing.Point(11, 19);
-            this.ckbMusic.Name = "ckbMusic";
-            this.ckbMusic.Size = new System.Drawing.Size(90, 23);
-            this.ckbMusic.TabIndex = 0;
-            this.ckbMusic.Text = "Musique";
-            this.ckbMusic.UseVisualStyleBackColor = false;
             // 
             // gpbTri
             // 
@@ -345,7 +261,7 @@
             this.grpBoxFiltre.Controls.Add(this.label1);
             this.grpBoxFiltre.Controls.Add(this.label2);
             this.grpBoxFiltre.Controls.Add(this.lblNationality);
-            this.grpBoxFiltre.Controls.Add(this.checkedListBox1);
+            this.grpBoxFiltre.Controls.Add(this.chkLstBoxNationality);
             this.grpBoxFiltre.Controls.Add(this.lblGenre);
             this.grpBoxFiltre.Controls.Add(this.trackBar_Min);
             this.grpBoxFiltre.Controls.Add(this.trackBar_Max);
@@ -368,7 +284,6 @@
             this.txtMax.Name = "txtMax";
             this.txtMax.Size = new System.Drawing.Size(40, 13);
             this.txtMax.TabIndex = 20;
-            this.txtMax.Text = "2018";
             this.txtMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMax.Validating += new System.ComponentModel.CancelEventHandler(this.txtMax_Validating);
             // 
@@ -380,7 +295,6 @@
             this.txtMin.Name = "txtMin";
             this.txtMin.Size = new System.Drawing.Size(40, 13);
             this.txtMin.TabIndex = 19;
-            this.txtMin.Text = "1950";
             this.txtMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtMin_Validating);
             // 
@@ -420,37 +334,69 @@
             this.lblNationality.TabIndex = 15;
             this.lblNationality.Text = "Nationalité";
             // 
-            // checkedListBox1
+            // chkLstBoxNationality
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "France",
-            "U.S.A.",
-            "Allemagne",
-            "Grande-Bretagne",
-            "Italie",
-            "Inde",
-            "Espagne"});
-            this.checkedListBox1.Location = new System.Drawing.Point(600, 48);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(150, 184);
-            this.checkedListBox1.TabIndex = 14;
+            this.chkLstBoxNationality.BackColor = System.Drawing.Color.DarkGray;
+            this.chkLstBoxNationality.FormattingEnabled = true;
+            this.chkLstBoxNationality.Location = new System.Drawing.Point(600, 48);
+            this.chkLstBoxNationality.Name = "chkLstBoxNationality";
+            this.chkLstBoxNationality.Size = new System.Drawing.Size(150, 184);
+            this.chkLstBoxNationality.TabIndex = 14;
+            // 
+            // release_year
+            // 
+            this.release_year.DataPropertyName = "release_year";
+            this.release_year.HeaderText = "release_year";
+            this.release_year.Name = "release_year";
+            // 
+            // mediaBindingSource
+            // 
+            this.mediaBindingSource.DataMember = "Media";
+            this.mediaBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // genreBindingSource
             // 
             this.genreBindingSource.DataMember = "Genre";
-            //this.genreBindingSource.DataSource = this.coAndCoDBDataSetMenu;
-            this.genreBindingSource.CurrentChanged += new System.EventHandler(this.genreBindingSource_CurrentChanged);
-            // 
-            // coAndCoDBDataSet
-            // 
-            //this.coAndCoDBDataSetMenu.DataSetName = "CoAndCoDBDataSet";
-            //this.coAndCoDBDataSetMenu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.genreBindingSource.DataSource = this.dataSet1;
             // 
             // genreTableAdapter
             // 
             this.genreTableAdapter.ClearBeforeFill = true;
+            // 
+            // nationalityBindingSource
+            // 
+            this.nationalityBindingSource.DataMember = "Nationality";
+            this.nationalityBindingSource.DataSource = this.dataSet1;
+            // 
+            // nationalityTableAdapter
+            // 
+            this.nationalityTableAdapter.ClearBeforeFill = true;
+            // 
+            // type_MediaTableAdapter
+            // 
+            this.type_MediaTableAdapter.ClearBeforeFill = true;
+            // 
+            // type_MediaBindingSource
+            // 
+            this.type_MediaBindingSource.DataMember = "Type_Media";
+            this.type_MediaBindingSource.DataSource = this.dataSet1;
+            // 
+            // mediaTableAdapter
+            // 
+            this.mediaTableAdapter.ClearBeforeFill = true;
+            // 
+            // panelResult
+            // 
+            this.panelResult.BackColor = System.Drawing.Color.DarkGray;
+            this.panelResult.Location = new System.Drawing.Point(8, 197);
+            this.panelResult.Name = "panelResult";
+            this.panelResult.Size = new System.Drawing.Size(770, 352);
+            this.panelResult.TabIndex = 9;
             // 
             // frmSearch
             // 
@@ -458,6 +404,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.panelResult);
             this.Controls.Add(this.panelMedia);
             this.Controls.Add(this.panelTri);
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -468,7 +415,7 @@
             this.Load += new System.EventHandler(this.frmSearch_Load);
             this.Controls.SetChildIndex(this.panelTri, 0);
             this.Controls.SetChildIndex(this.panelMedia, 0);
-            this.panelMedia.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.panelResult, 0);
             this.gpbTri.ResumeLayout(false);
             this.gpbTri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Min)).EndInit();
@@ -476,9 +423,11 @@
             this.panelTri.ResumeLayout(false);
             this.grpBoxFiltre.ResumeLayout(false);
             this.grpBoxFiltre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NationalityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nationalityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.type_MediaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,11 +435,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox panelMedia;
-        private System.Windows.Forms.CheckBox ckbBD;
-        private System.Windows.Forms.CheckBox ckbBook;
-        private System.Windows.Forms.CheckBox ckbSerie;
-        private System.Windows.Forms.CheckBox ckbMovie;
-        private System.Windows.Forms.CheckBox ckbMusic;
         private System.Windows.Forms.GroupBox gpbTri;
         private System.Windows.Forms.Button btnSearchTri;
         private System.Windows.Forms.Panel pnlYear;
@@ -512,11 +456,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNationality;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        //private CoAndCoDBDataSet coAndCoDBDataSet;
+        private System.Windows.Forms.CheckedListBox chkLstBoxNationality;
+        private Data.DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource genreBindingSource;
-        private CoAndCoDBDataSetTableAdapters.GenreTableAdapter genreTableAdapter;
-        private System.Windows.Forms.BindingSource NationalityBindingSource;
+        private Data.DataSet1TableAdapters.GenreTableAdapter genreTableAdapter;
+        private System.Windows.Forms.BindingSource nationalityBindingSource;
+        private Data.DataSet1TableAdapters.NationalityTableAdapter nationalityTableAdapter;
+        private Data.DataSet1TableAdapters.Type_MediaTableAdapter type_MediaTableAdapter;
+        private System.Windows.Forms.BindingSource type_MediaBindingSource;
+        private System.Windows.Forms.BindingSource mediaBindingSource;
+        private Data.DataSet1TableAdapters.MediaTableAdapter mediaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn release_year;
+        private System.Windows.Forms.Panel panelResult;
     }
 }
 

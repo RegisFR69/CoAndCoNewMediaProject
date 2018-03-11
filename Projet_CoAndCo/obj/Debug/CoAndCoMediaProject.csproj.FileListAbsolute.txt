@@ -29,8 +29,8 @@ C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\obj\Debug\CoAndCoMediaProject.csp
 C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\obj\Debug\CoAndCoMediaProject.csproj.CoreCompileInputs.cache
 C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\obj\Debug\Projet_CoAndCo.exe
 C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\obj\Debug\Projet_CoAndCo.pdb
-C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\CoAndCoDB.mdf
-C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\CoAndCoDB_log.ldf
 C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\Projet_CoAndCo.exe.config
 C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\Projet_CoAndCo.exe
 C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\Projet_CoAndCo.pdb
+C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\Data\CoAndCoMediaDB.mdf
+C:\repos\CoAndCoNewMediaProject\Projet_CoAndCo\bin\Debug\Data\CoAndCoMediaDB_log.ldf

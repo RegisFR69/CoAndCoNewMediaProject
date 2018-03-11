@@ -5,3 +5,5 @@ CoAndCoMediaProject.csproj
 Projet_CoAndCo.sln
 /Projet_CoAndCo/bin
 /Projet_CoAndCo/obj
+/Projet_CoAndCo/Data/CoAndCoMediaDB_log.ldf
+/Projet_CoAndCo/Data/CoAndCoMediaDB.mdf

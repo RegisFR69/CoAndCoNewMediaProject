@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -228,23 +229,65 @@ namespace Projet_CoAndCo
         }
 
         private void frmSearch_Load(object sender, EventArgs e)
-        {
-            
-            //this.genreTableAdapter.Fill(this.coAndCoDBDataSetMenu.Genre);
+        {         
+            this.nationalityTableAdapter.Fill(this.dataSet1.Nationality);
+            this.genreTableAdapter.Fill(this.dataSet1.Genre);
+            this.type_MediaTableAdapter.Fill(this.dataSet1.Type_Media);
+
             getItemGenre();
+            getItemNationality();
+            getBtnType_Media();
+            int yearMax = (int)this.mediaTableAdapter.maxYear();
+            trackBar_Max.Value = yearMax;
+            trackBar_Max.Maximum = yearMax;
+            trackBar_Min.Maximum = yearMax;
+            txtMax.Text = yearMax.ToString();
+            int yearMin = (int)this.mediaTableAdapter.minYear();
+            trackBar_Min.Value = yearMin;
+            trackBar_Min.Minimum = yearMin;
+            trackBar_Max.Minimum = yearMin;
+            txtMin.Text = yearMin.ToString();
         }
 
         private void getItemGenre()
         {
-            //for (int i = 0; i < coAndCoDBDataSetMenu.Genre.Rows.Count; i++)
+            for (int i = 0; i < dataSet1.Genre.Rows.Count; i++)
             {
-                //chkLstBoxGenre.Items.Add(coAndCoDBDataSetMenu.Genre.Rows[i][1].ToString());
+                chkLstBoxGenre.Items.Add(dataSet1.Genre.Rows[i][1].ToString());
             }
         }
 
-        private void genreBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void getItemNationality()
         {
+            for (int i = 0; i < dataSet1.Nationality.Rows.Count; i++)
+            {
+                chkLstBoxNationality.Items.Add(dataSet1.Nationality.Rows[i][1].ToString());
+            }
+        }
 
+        private void getBtnType_Media()
+        {
+            for (int i = 0; i < dataSet1.Type_Media.Rows.Count; i++)
+            {
+                CheckBox chkBoxMedia = new CheckBox();
+                this.panelMedia.Controls.Add(chkBoxMedia);
+                chkBoxMedia.Appearance = Appearance.Button;
+                chkBoxMedia.Text = dataSet1.Type_Media.Rows[i][1].ToString();
+                chkBoxMedia.BackColor = Color.DarkGray;
+                chkBoxMedia.FlatAppearance.BorderSize = 0;
+                chkBoxMedia.FlatAppearance.CheckedBackColor = Color.Turquoise;
+                chkBoxMedia.FlatAppearance.MouseOverBackColor = Color.Turquoise;
+                chkBoxMedia.FlatStyle = FlatStyle.Flat;
+                chkBoxMedia.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                chkBoxMedia.Location = new System.Drawing.Point(10 + 110 * i, 19);
+                chkBoxMedia.Text = dataSet1.Type_Media.Rows[i][1].ToString();
+                string chkName = "chkBox" + chkBoxMedia.Text;
+                chkBoxMedia.Size = new Size(90, 23);
+                chkBoxMedia.TabIndex = i + 1;
+                chkBoxMedia.UseVisualStyleBackColor = false;
+                chkBoxMedia.Name = chkName;
+            }
+            
         }
     }
 }

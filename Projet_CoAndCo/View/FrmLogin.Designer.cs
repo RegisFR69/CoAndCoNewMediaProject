@@ -37,10 +37,10 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.btnValid_Login = new System.Windows.Forms.Button();
-            this.coAndCoDBDataSetLogin = new Projet_CoAndCo.CoAndCoDBDataSet();
+            this.dataSetUser = new Projet_CoAndCo.Data.DataSet1();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.UserTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetLogin)).BeginInit();
+            this.userTableAdapter = new Projet_CoAndCo.Data.DataSet1TableAdapters.UserTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,16 +130,15 @@
             this.btnValid_Login.UseVisualStyleBackColor = true;
             this.btnValid_Login.Click += new System.EventHandler(this.btnValid_Login_Click);
             // 
-            // coAndCoDBDataSetLogin
+            // dataSetUser
             // 
-            this.coAndCoDBDataSetLogin.DataSetName = "CoAndCoDBDataSet";
-            this.coAndCoDBDataSetLogin.Locale = new System.Globalization.CultureInfo("fr-FR");
-            this.coAndCoDBDataSetLogin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSetUser.DataSetName = "DataSetUser";
+            this.dataSetUser.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // userBindingSource
             // 
             this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.coAndCoDBDataSetLogin;
+            this.userBindingSource.DataSource = this.dataSetUser;
             // 
             // userTableAdapter
             // 
@@ -168,7 +167,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Connection";
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.coAndCoDBDataSetLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,8 +184,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtPassword2;
         private System.Windows.Forms.Button btnValid_Login;
-        private CoAndCoDBDataSet coAndCoDBDataSetLogin;
+        private Data.DataSet1 dataSetUser;
         private System.Windows.Forms.BindingSource userBindingSource;
-        private CoAndCoDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private Data.DataSet1TableAdapters.UserTableAdapter userTableAdapter;
     }
 }

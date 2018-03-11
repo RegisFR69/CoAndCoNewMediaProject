@@ -24,7 +24,7 @@ namespace Projet_CoAndCo
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-             this.userTableAdapter.Fill(this.coAndCoDBDataSetLogin.User);
+           this.userTableAdapter.Fill(this.dataSetUser.User);
         }
 
         private void txtLogin_Validating(object sender, CancelEventArgs e)

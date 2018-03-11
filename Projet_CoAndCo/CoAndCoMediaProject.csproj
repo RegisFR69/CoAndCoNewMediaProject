@@ -63,15 +63,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin_functions.cs">
+    <Compile Include="Data\DataSetMediaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMediaDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLogin_functions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="CoAndCoDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CoAndCoDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,16 +146,16 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="CoAndCoDBDataSet.xsc">
-      <DependentUpon>CoAndCoDBDataSet.xsd</DependentUpon>
+    <None Include="Data\DataSetMediaDB.xsc">
+      <DependentUpon>DataSetMediaDB.xsd</DependentUpon>
     </None>
-    <None Include="CoAndCoDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CoAndCoDBDataSet.Designer.cs</LastGenOutput>
+    <None Include="Data\DataSetMediaDB.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMediaDB.Designer.cs</LastGenOutput>
     </None>
-    <None Include="CoAndCoDBDataSet.xss">
-      <DependentUpon>CoAndCoDBDataSet.xsd</DependentUpon>
+    <None Include="Data\DataSetMediaDB.xss">
+      <DependentUpon>DataSetMediaDB.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\frmBook.datasource" />
     <None Include="Properties\DataSources\frmLogin.datasource" />
@@ -204,13 +204,6 @@
     <None Include="Icon\Plus_24.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CoAndCoDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CoAndCoDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CoAndCoDB.mdf</DependentUpon>
-    </Content>
     <None Include="Icon\Bottom_64_40D0E0.png" />
     <None Include="Icon\Top_64_40D0E0.png" />
     <None Include="Icon\Top_64.png" />
@@ -234,6 +227,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\CoAndCoMediaDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CoAndCoMediaDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CoAndCoMediaDB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

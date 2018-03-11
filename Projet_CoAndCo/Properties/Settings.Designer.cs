@@ -33,5 +33,16 @@ namespace Projet_CoAndCo.Properties {
                 return ((string)(this["CoAndCoDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Data\\CoAndCoM" +
+            "ediaDB.mdf;Integrated Security=True")]
+        public string CoAndCoMediaDBConnectionString {
+            get {
+                return ((string)(this["CoAndCoMediaDBConnectionString"]));
+            }
+        }
     }
 }

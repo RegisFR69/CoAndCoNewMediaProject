@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.menuBar_menuFichier = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar_fichier_itemNewPlaylist = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,13 +75,7 @@
             this.menuBar_btnConnection = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMenuBar = new System.Windows.Forms.MenuStrip();
             this.menuBar_txtMemberName = new System.Windows.Forms.ToolStripMenuItem();
-            this.typeUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.type_UserTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.Type_UserTableAdapter();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter = new Projet_CoAndCo.CoAndCoDBDataSetTableAdapters.UserTableAdapter();
             this.menuMenuBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.typeUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBar_menuFichier
@@ -461,14 +454,6 @@
             this.menuBar_txtMemberName.Size = new System.Drawing.Size(87, 20);
             this.menuBar_txtMemberName.Text = "unknow user";
             // 
-            // type_UserTableAdapter
-            // 
-            this.type_UserTableAdapter.ClearBeforeFill = true;
-            // 
-            // userTableAdapter
-            // 
-            this.userTableAdapter.ClearBeforeFill = true;
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,8 +469,6 @@
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuMenuBar.ResumeLayout(false);
             this.menuMenuBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.typeUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,10 +522,5 @@
         private System.Windows.Forms.ToolStripMenuItem menuBar_btnConnection;
         private System.Windows.Forms.MenuStrip menuMenuBar;
         private System.Windows.Forms.ToolStripMenuItem menuBar_txtMemberName;
-        private CoAndCoDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
-        private System.Windows.Forms.BindingSource typeUserBindingSource;
-        private CoAndCoDBDataSetTableAdapters.Type_UserTableAdapter type_UserTableAdapter;
-        private System.Windows.Forms.BindingSource userBindingSource;
-        private CoAndCoDBDataSetTableAdapters.UserTableAdapter userTableAdapter1;
     }
 }

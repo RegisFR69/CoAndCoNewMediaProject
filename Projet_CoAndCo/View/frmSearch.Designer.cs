@@ -78,12 +78,14 @@
             // 
             // panelMedia
             // 
+            this.panelMedia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMedia.BackColor = System.Drawing.Color.DarkGray;
-            this.panelMedia.Location = new System.Drawing.Point(11, 53);
+            this.panelMedia.Location = new System.Drawing.Point(5, 40);
             this.panelMedia.Margin = new System.Windows.Forms.Padding(4);
             this.panelMedia.Name = "panelMedia";
             this.panelMedia.Padding = new System.Windows.Forms.Padding(4);
-            this.panelMedia.Size = new System.Drawing.Size(1027, 70);
+            this.panelMedia.Size = new System.Drawing.Size(1035, 70);
             this.panelMedia.TabIndex = 5;
             this.panelMedia.TabStop = false;
             this.panelMedia.Text = "Médias";
@@ -262,10 +264,10 @@
             this.panelTri.BackColor = System.Drawing.Color.DarkGray;
             this.panelTri.Controls.Add(this.grpBoxFiltre);
             this.panelTri.Controls.Add(this.gpbTri);
-            this.panelTri.Location = new System.Drawing.Point(11, 130);
+            this.panelTri.Location = new System.Drawing.Point(5, 115);
             this.panelTri.Margin = new System.Windows.Forms.Padding(4);
             this.panelTri.Name = "panelTri";
-            this.panelTri.Size = new System.Drawing.Size(1027, 452);
+            this.panelTri.Size = new System.Drawing.Size(1035, 452);
             this.panelTri.TabIndex = 9;
             // 
             // grpBoxFiltre
@@ -415,11 +417,14 @@
             // 
             // panelResult
             // 
+            this.panelResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelResult.BackColor = System.Drawing.Color.DarkGray;
-            this.panelResult.Location = new System.Drawing.Point(11, 242);
+            this.panelResult.Location = new System.Drawing.Point(5, 230);
             this.panelResult.Margin = new System.Windows.Forms.Padding(4);
             this.panelResult.Name = "panelResult";
-            this.panelResult.Size = new System.Drawing.Size(1027, 433);
+            this.panelResult.Size = new System.Drawing.Size(1035, 450);
             this.panelResult.TabIndex = 9;
             // 
             // frmSearch
@@ -428,19 +433,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1045, 690);
-            this.Controls.Add(this.panelResult);
             this.Controls.Add(this.panelMedia);
             this.Controls.Add(this.panelTri);
+            this.Controls.Add(this.panelResult);
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
             this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Co & Co Média";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSearch_FormClosed);
             this.Load += new System.EventHandler(this.frmSearch_Load);
+            this.Controls.SetChildIndex(this.panelResult, 0);
             this.Controls.SetChildIndex(this.panelTri, 0);
             this.Controls.SetChildIndex(this.panelMedia, 0);
-            this.Controls.SetChildIndex(this.panelResult, 0);
             this.gpbTri.ResumeLayout(false);
             this.gpbTri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Min)).EndInit();

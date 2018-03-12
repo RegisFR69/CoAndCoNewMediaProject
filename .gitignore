@@ -7,3 +7,6 @@ Projet_CoAndCo.sln
 /Projet_CoAndCo/obj
 /Projet_CoAndCo/Data/CoAndCoMediaDB_log.ldf
 /Projet_CoAndCo/Data/CoAndCoMediaDB.mdf
+\bin
+\obj
+\Projet_CoAndCo\obj

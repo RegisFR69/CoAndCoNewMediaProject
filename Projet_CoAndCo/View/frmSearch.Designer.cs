@@ -79,9 +79,11 @@
             // panelMedia
             // 
             this.panelMedia.BackColor = System.Drawing.Color.DarkGray;
-            this.panelMedia.Location = new System.Drawing.Point(8, 43);
+            this.panelMedia.Location = new System.Drawing.Point(11, 53);
+            this.panelMedia.Margin = new System.Windows.Forms.Padding(4);
             this.panelMedia.Name = "panelMedia";
-            this.panelMedia.Size = new System.Drawing.Size(770, 57);
+            this.panelMedia.Padding = new System.Windows.Forms.Padding(4);
+            this.panelMedia.Size = new System.Drawing.Size(1027, 70);
             this.panelMedia.TabIndex = 5;
             this.panelMedia.TabStop = false;
             this.panelMedia.Text = "Médias";
@@ -95,8 +97,10 @@
             this.gpbTri.Controls.Add(this.radYears);
             this.gpbTri.Controls.Add(this.radAlpha);
             this.gpbTri.Location = new System.Drawing.Point(0, 0);
+            this.gpbTri.Margin = new System.Windows.Forms.Padding(4);
             this.gpbTri.Name = "gpbTri";
-            this.gpbTri.Size = new System.Drawing.Size(770, 87);
+            this.gpbTri.Padding = new System.Windows.Forms.Padding(4);
+            this.gpbTri.Size = new System.Drawing.Size(1027, 107);
             this.gpbTri.TabIndex = 8;
             this.gpbTri.TabStop = false;
             this.gpbTri.Text = "Trier par";
@@ -110,9 +114,10 @@
             this.btnMaxTri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnMaxTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxTri.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMaxTri.Location = new System.Drawing.Point(340, 60);
+            this.btnMaxTri.Location = new System.Drawing.Point(453, 74);
+            this.btnMaxTri.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaxTri.Name = "btnMaxTri";
-            this.btnMaxTri.Size = new System.Drawing.Size(90, 25);
+            this.btnMaxTri.Size = new System.Drawing.Size(120, 31);
             this.btnMaxTri.TabIndex = 6;
             this.btnMaxTri.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMaxTri.UseVisualStyleBackColor = true;
@@ -123,25 +128,28 @@
             // pnlYear
             // 
             this.pnlYear.BackColor = System.Drawing.Color.DarkGray;
-            this.pnlYear.Location = new System.Drawing.Point(100, 15);
+            this.pnlYear.Location = new System.Drawing.Point(133, 18);
+            this.pnlYear.Margin = new System.Windows.Forms.Padding(4);
             this.pnlYear.Name = "pnlYear";
-            this.pnlYear.Size = new System.Drawing.Size(650, 50);
+            this.pnlYear.Size = new System.Drawing.Size(867, 62);
             this.pnlYear.TabIndex = 3;
             this.pnlYear.Visible = false;
             // 
             // pnlAlpha
             // 
-            this.pnlAlpha.Location = new System.Drawing.Point(100, 15);
+            this.pnlAlpha.Location = new System.Drawing.Point(133, 18);
+            this.pnlAlpha.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAlpha.Name = "pnlAlpha";
-            this.pnlAlpha.Size = new System.Drawing.Size(650, 50);
+            this.pnlAlpha.Size = new System.Drawing.Size(867, 62);
             this.pnlAlpha.TabIndex = 2;
             // 
             // radYears
             // 
             this.radYears.AutoSize = true;
-            this.radYears.Location = new System.Drawing.Point(25, 42);
+            this.radYears.Location = new System.Drawing.Point(33, 52);
+            this.radYears.Margin = new System.Windows.Forms.Padding(4);
             this.radYears.Name = "radYears";
-            this.radYears.Size = new System.Drawing.Size(61, 17);
+            this.radYears.Size = new System.Drawing.Size(77, 21);
             this.radYears.TabIndex = 1;
             this.radYears.Text = "Années";
             this.radYears.UseVisualStyleBackColor = true;
@@ -151,9 +159,10 @@
             // 
             this.radAlpha.AutoSize = true;
             this.radAlpha.Checked = true;
-            this.radAlpha.Location = new System.Drawing.Point(25, 19);
+            this.radAlpha.Location = new System.Drawing.Point(33, 23);
+            this.radAlpha.Margin = new System.Windows.Forms.Padding(4);
             this.radAlpha.Name = "radAlpha";
-            this.radAlpha.Size = new System.Drawing.Size(52, 17);
+            this.radAlpha.Size = new System.Drawing.Size(65, 21);
             this.radAlpha.TabIndex = 0;
             this.radAlpha.TabStop = true;
             this.radAlpha.Text = "Alpha";
@@ -168,9 +177,10 @@
             this.btnMinTri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnMinTri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnMinTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinTri.Location = new System.Drawing.Point(340, 194);
+            this.btnMinTri.Location = new System.Drawing.Point(453, 239);
+            this.btnMinTri.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinTri.Name = "btnMinTri";
-            this.btnMinTri.Size = new System.Drawing.Size(90, 25);
+            this.btnMinTri.Size = new System.Drawing.Size(120, 31);
             this.btnMinTri.TabIndex = 7;
             this.btnMinTri.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMinTri.UseVisualStyleBackColor = true;
@@ -184,9 +194,10 @@
             this.btnSearchTri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
             this.btnSearchTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchTri.Location = new System.Drawing.Point(340, 214);
+            this.btnSearchTri.Location = new System.Drawing.Point(453, 263);
+            this.btnSearchTri.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchTri.Name = "btnSearchTri";
-            this.btnSearchTri.Size = new System.Drawing.Size(90, 30);
+            this.btnSearchTri.Size = new System.Drawing.Size(120, 37);
             this.btnSearchTri.TabIndex = 5;
             this.btnSearchTri.Text = "Rechercher";
             this.btnSearchTri.UseVisualStyleBackColor = true;
@@ -206,39 +217,42 @@
             this.chkLstBoxGenre.BackColor = System.Drawing.Color.DarkGray;
             this.chkLstBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkLstBoxGenre.FormattingEnabled = true;
-            this.chkLstBoxGenre.Location = new System.Drawing.Point(25, 48);
+            this.chkLstBoxGenre.Location = new System.Drawing.Point(33, 59);
+            this.chkLstBoxGenre.Margin = new System.Windows.Forms.Padding(4);
             this.chkLstBoxGenre.Name = "chkLstBoxGenre";
-            this.chkLstBoxGenre.Size = new System.Drawing.Size(150, 196);
+            this.chkLstBoxGenre.Size = new System.Drawing.Size(199, 232);
             this.chkLstBoxGenre.TabIndex = 8;
             // 
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(19, 29);
+            this.lblGenre.Location = new System.Drawing.Point(25, 36);
+            this.lblGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(36, 13);
+            this.lblGenre.Size = new System.Drawing.Size(48, 17);
             this.lblGenre.TabIndex = 9;
             this.lblGenre.Text = "Genre";
             // 
             // trackBar_Min
             // 
-            this.trackBar_Min.Location = new System.Drawing.Point(246, 64);
+            this.trackBar_Min.Location = new System.Drawing.Point(328, 79);
+            this.trackBar_Min.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar_Min.Maximum = 2018;
             this.trackBar_Min.Minimum = 1950;
             this.trackBar_Min.Name = "trackBar_Min";
-            this.trackBar_Min.Size = new System.Drawing.Size(274, 45);
+            this.trackBar_Min.Size = new System.Drawing.Size(365, 56);
             this.trackBar_Min.TabIndex = 12;
             this.trackBar_Min.Value = 1950;
             this.trackBar_Min.Scroll += new System.EventHandler(this.trackBar_Min_Scroll);
             // 
             // trackBar_Max
             // 
-            this.trackBar_Max.Location = new System.Drawing.Point(246, 112);
+            this.trackBar_Max.Location = new System.Drawing.Point(328, 138);
             this.trackBar_Max.Margin = new System.Windows.Forms.Padding(0);
             this.trackBar_Max.Maximum = 2018;
             this.trackBar_Max.Minimum = 1950;
             this.trackBar_Max.Name = "trackBar_Max";
-            this.trackBar_Max.Size = new System.Drawing.Size(274, 45);
+            this.trackBar_Max.Size = new System.Drawing.Size(365, 56);
             this.trackBar_Max.TabIndex = 13;
             this.trackBar_Max.Value = 2018;
             this.trackBar_Max.Scroll += new System.EventHandler(this.trackBar_Max_Scroll);
@@ -248,9 +262,10 @@
             this.panelTri.BackColor = System.Drawing.Color.DarkGray;
             this.panelTri.Controls.Add(this.grpBoxFiltre);
             this.panelTri.Controls.Add(this.gpbTri);
-            this.panelTri.Location = new System.Drawing.Point(8, 106);
+            this.panelTri.Location = new System.Drawing.Point(11, 130);
+            this.panelTri.Margin = new System.Windows.Forms.Padding(4);
             this.panelTri.Name = "panelTri";
-            this.panelTri.Size = new System.Drawing.Size(770, 367);
+            this.panelTri.Size = new System.Drawing.Size(1027, 452);
             this.panelTri.TabIndex = 9;
             // 
             // grpBoxFiltre
@@ -268,10 +283,11 @@
             this.grpBoxFiltre.Controls.Add(this.chkLstBoxGenre);
             this.grpBoxFiltre.Controls.Add(this.btnSearchTri);
             this.grpBoxFiltre.Controls.Add(this.btnMinTri);
-            this.grpBoxFiltre.Location = new System.Drawing.Point(0, 91);
+            this.grpBoxFiltre.Location = new System.Drawing.Point(0, 112);
+            this.grpBoxFiltre.Margin = new System.Windows.Forms.Padding(4);
             this.grpBoxFiltre.Name = "grpBoxFiltre";
             this.grpBoxFiltre.Padding = new System.Windows.Forms.Padding(0);
-            this.grpBoxFiltre.Size = new System.Drawing.Size(770, 254);
+            this.grpBoxFiltre.Size = new System.Drawing.Size(1027, 313);
             this.grpBoxFiltre.TabIndex = 9;
             this.grpBoxFiltre.TabStop = false;
             this.grpBoxFiltre.Text = "Filtrer par";
@@ -280,9 +296,10 @@
             // 
             this.txtMax.BackColor = System.Drawing.Color.Turquoise;
             this.txtMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMax.Location = new System.Drawing.Point(298, 96);
+            this.txtMax.Location = new System.Drawing.Point(397, 118);
+            this.txtMax.Margin = new System.Windows.Forms.Padding(4);
             this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(40, 13);
+            this.txtMax.Size = new System.Drawing.Size(53, 15);
             this.txtMax.TabIndex = 20;
             this.txtMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMax.Validating += new System.ComponentModel.CancelEventHandler(this.txtMax_Validating);
@@ -291,9 +308,10 @@
             // 
             this.txtMin.BackColor = System.Drawing.Color.Turquoise;
             this.txtMin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMin.Location = new System.Drawing.Point(298, 48);
+            this.txtMin.Location = new System.Drawing.Point(397, 59);
+            this.txtMin.Margin = new System.Windows.Forms.Padding(4);
             this.txtMin.Name = "txtMin";
-            this.txtMin.Size = new System.Drawing.Size(40, 13);
+            this.txtMin.Size = new System.Drawing.Size(53, 15);
             this.txtMin.TabIndex = 19;
             this.txtMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtMin_Validating);
@@ -301,36 +319,40 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(261, 96);
+            this.label3.Location = new System.Drawing.Point(348, 118);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 13);
+            this.label3.Size = new System.Drawing.Size(20, 17);
             this.label3.TabIndex = 18;
             this.label3.Text = "et";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(261, 48);
+            this.label1.Location = new System.Drawing.Point(348, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "entre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(243, 29);
+            this.label2.Location = new System.Drawing.Point(324, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Années";
             // 
             // lblNationality
             // 
             this.lblNationality.AutoSize = true;
-            this.lblNationality.Location = new System.Drawing.Point(597, 29);
+            this.lblNationality.Location = new System.Drawing.Point(796, 36);
+            this.lblNationality.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNationality.Name = "lblNationality";
-            this.lblNationality.Size = new System.Drawing.Size(57, 13);
+            this.lblNationality.Size = new System.Drawing.Size(75, 17);
             this.lblNationality.TabIndex = 15;
             this.lblNationality.Text = "Nationalité";
             // 
@@ -338,9 +360,10 @@
             // 
             this.chkLstBoxNationality.BackColor = System.Drawing.Color.DarkGray;
             this.chkLstBoxNationality.FormattingEnabled = true;
-            this.chkLstBoxNationality.Location = new System.Drawing.Point(600, 48);
+            this.chkLstBoxNationality.Location = new System.Drawing.Point(800, 59);
+            this.chkLstBoxNationality.Margin = new System.Windows.Forms.Padding(4);
             this.chkLstBoxNationality.Name = "chkLstBoxNationality";
-            this.chkLstBoxNationality.Size = new System.Drawing.Size(150, 184);
+            this.chkLstBoxNationality.Size = new System.Drawing.Size(199, 225);
             this.chkLstBoxNationality.TabIndex = 14;
             // 
             // release_year
@@ -393,21 +416,23 @@
             // panelResult
             // 
             this.panelResult.BackColor = System.Drawing.Color.DarkGray;
-            this.panelResult.Location = new System.Drawing.Point(8, 197);
+            this.panelResult.Location = new System.Drawing.Point(11, 242);
+            this.panelResult.Margin = new System.Windows.Forms.Padding(4);
             this.panelResult.Name = "panelResult";
-            this.panelResult.Size = new System.Drawing.Size(770, 352);
+            this.panelResult.Size = new System.Drawing.Size(1027, 433);
             this.panelResult.TabIndex = 9;
             // 
             // frmSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.panelResult);
             this.Controls.Add(this.panelMedia);
             this.Controls.Add(this.panelTri);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Co & Co Média";

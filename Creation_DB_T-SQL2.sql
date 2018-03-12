@@ -70,8 +70,8 @@ CREATE TABLE [dbo].[User_Playlist] (
 
 CREATE TABLE [dbo].[Media] (
 	[id_media] INT IDENTITY (1, 1) NOT NULL,
-	[title_VO] NVARCHAR (50) NOT NULL,
-    [title_VF] NVARCHAR (20) NULL,
+	[title_VO] NVARCHAR (50) NULL,
+    [title_VF] NVARCHAR (50) NULL,
 	[release_date] DATE NULL,
 	[release_year] INT NULL,
 	[id_cover] INT NULL,

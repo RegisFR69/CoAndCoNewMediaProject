@@ -5,7 +5,7 @@ INSERT INTO [dbo].[User] VALUES ('Vador', 'dark', 2)
 INSERT INTO [dbo].[User] VALUES ('Bob', 'leponge', 1)
 
 INSERT INTO [dbo].[Synopsis] VALUES ('Pour la première fois de sa vie, Daniel Blake, un menuisier anglais de 59 ans, est contraint de faire appel à l’aide sociale à la suite de problèmes cardiaques. Mais bien que son médecin lui ait interdit de travailler, il se voit signifier l''obligation d''une recherche d''emploi sous peine de sanction. Au cours de ses rendez-vous réguliers au « job center », Daniel va croiser la route de Katie, mère célibataire de deux enfants qui a été contrainte d''accepter un logement à 450km de sa ville natale pour ne pas être placée en foyer d’accueil. Pris tous deux dans les filets des aberrations administratives de la Grande-Bretagne d’aujourd’hui, Daniel et Katie vont tenter de s’entraider…')
-INSERT INTO [dbo].[Media] ([title_VO], [title_VF], [release_date], [id_type_media], [id_synopsis]) VALUES ('I,Danel Blake', 'Moi, Daniel Blake', '2016/10/26', 1,1)
+INSERT INTO [dbo].[Media] ([title_VO], [title_VF], [release_date], [release_year], [id_type_media], [id_synopsis]) VALUES ('I,Danel Blake', 'Moi, Daniel Blake', '2016/10/26',2016, 1,1)
 INSERT INTO [dbo].[Origin] VALUES (1,1)
 INSERT INTO [dbo].[Origin] VALUES (1,4)
 INSERT INTO [dbo].[Origin] VALUES (1,8)

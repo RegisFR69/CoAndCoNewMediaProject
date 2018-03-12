@@ -237,6 +237,22 @@ namespace Projet_CoAndCo
             getItemGenre();
             getItemNationality();
             getBtnType_Media();
+            initTrackBars();
+            testFlow();
+        }
+
+        private void testFlow()
+        {
+            
+            for (int i = 0; i < 10; i++)
+            {
+                Panel panel = new Panel();
+                panel.BackColor = Color.Blue;
+                this.flowLayoutPanelResearch.Controls.Add(panel);
+            }
+        }
+        private void initTrackBars()
+        {
             int yearMax = (int)this.mediaTableAdapter.maxYear();
             trackBar_Max.Value = yearMax;
             trackBar_Max.Maximum = yearMax;
@@ -248,7 +264,6 @@ namespace Projet_CoAndCo
             trackBar_Max.Minimum = yearMin;
             txtMin.Text = yearMin.ToString();
         }
-
         private void getItemGenre()
         {
             for (int i = 0; i < dataSet1.Genre.Rows.Count; i++)

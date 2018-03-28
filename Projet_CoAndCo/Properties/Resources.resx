@@ -124,8 +124,11 @@
   <data name="CoAndCo_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\CoAndCo_256.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MinThumb_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\MinThumb_24.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bottom_64_40D0E0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\Bottom_64_40D0E0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Top_64_40D0E0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\Top_64_40D0E0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MaxThumb_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\MaxThumb_24.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,16 +142,16 @@
   <data name="Liste_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\Liste_24.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CoAndCo_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\CoAndCo_64.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MinThumb_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\MinThumb_24.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CoAndCo_1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\CoAndCo_1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Top_64_40D0E0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\Top_64_40D0E0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CoAndCo_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\CoAndCo_64.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bottom_64_40D0E0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\Bottom_64_40D0E0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Default_Media_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\Default_Media_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

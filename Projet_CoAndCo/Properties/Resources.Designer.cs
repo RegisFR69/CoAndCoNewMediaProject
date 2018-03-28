@@ -103,6 +103,16 @@ namespace Projet_CoAndCo.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Default_Media_128 {
+            get {
+                object obj = ResourceManager.GetObject("Default_Media_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Liste_24 {
             get {
                 object obj = ResourceManager.GetObject("Liste_24", resourceCulture);
